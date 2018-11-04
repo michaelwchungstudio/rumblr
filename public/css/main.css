@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 16px; }
+
+.navbar {
+  text-align: center;
+  margin: 3.5vh 0; }
+
+.navbar ul li {
+  display: inline-block; }
+
+.sign-up {
+  margin: 0 auto; }
+
+/*# sourceMappingURL=main.css.map */

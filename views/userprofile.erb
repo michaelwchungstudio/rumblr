@@ -1,0 +1,27 @@
+<h2>Hello <%= @currentuser.username %> </h2>
+
+<h3>First Name: <%= @currentuser.firstname %> </h3>
+<h3>Last Name: <%= @currentuser.lastname %> </h3>
+<h3>Email: <%= @currentuser.email %> </h3>
+<h3>Birthday: <%= @currentuser.birthday %> </h3>
+
+<br>
+
+<a href='/users/<%= @currentuser.id %>/edit'><input type="submit" value='update user info'></a>
+
+<br>
+
+<form method='post' action='/destroy/<%= @currentuser.id %>'>
+  <p>Destroy password confirmation</p>
+  <input type="text" name='destroycheck' value='type your password here to confirm destroy'>
+	<input type="submit" value="destroy user">
+</form>
+
+<br>
+<hr>
+<br>
+
+<% @blogs.each_with_index do |blog, index| %>
+<div><a href="/blogs/<%= blog.id %>"> <%= index + 1 %>. Title: <%= blog.title %></a></div>
+<div> <%= blog.content %> </div>
+<% end %>

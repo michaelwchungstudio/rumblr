@@ -1,0 +1,17 @@
+<h3>Individual Blog:</h3>
+
+<div><%= @blog.title %></div>
+<div><%= @blog.content %></div>
+<div><%= @blog.user_id %></div>
+
+<br>
+<hr>
+<br>
+
+<a href='/blogs/<%= @blog.id %>/edit'><input type="submit" value='update'></a>
+
+<br>
+
+<form method='post' action='/destroy/<%= @blog.id %>'>
+	<input type="submit" value="DESTROYDESTROYDESTROY">
+</form>

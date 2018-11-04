@@ -1,0 +1,12 @@
+
+<hr>
+<br>
+<hr>
+
+<h2>List of all blogs:</h2>
+
+<% @blogs.each_with_index do |b, index| %>
+<div><a href="/blogs/<%= b.id %>"><%= index + 1 %> Title: <%= b.title %></a></div>
+<div> <%= b.content %></div>
+<!-- <div> <#%= b.user.username %> </div> -->
+<% end %>

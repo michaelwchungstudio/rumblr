@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <link rel="stylesheet" href="../css/main.css">
+    <title></title>
+  </head>
+  <body>
+    <nav class='navbar'>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/users">Users</a></li>
+        <% if !user_logged_in %>
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+        <% end %>
+        <% if user_logged_in %>
+          <li><a href="/newblog">New Blog</a></li>
+          <li><a href="/users/<%= @active_user.id %>">Profile</a></li>
+          <li><a href="/logout">Log Out</a></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <div class='main-container'>
+  		<%= yield %>
+  	</div>
+
+
+  </body>
+</html>

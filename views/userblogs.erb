@@ -1,0 +1,8 @@
+<h2>List of <%= @viewuser.username %>'s blogs</h2>
+<br>
+
+<% @userblogs.each_with_index do |blog, index| %>
+  <h3> <%= blog.title %> </h3>
+  <p> <%= blog.content %> </p>
+  <br>
+<% end %>
