@@ -28,6 +28,11 @@
   height: 100vh;
   width: 100vw; }
 
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 4.5rem; }
+
 .navbar {
   text-align: center;
   box-sizing: content-box;
@@ -54,7 +59,7 @@ nav ul li:first-child {
 
 .navbar ul li a {
   display: block;
-  font-size: 1.125em;
+  font-size: 1.15em;
   font-weight: 500;
   color: #F9F9F9;
   padding: 2.5em 2.5em;
@@ -80,23 +85,16 @@ nav ul li:first-child {
 
 .allusers-wrapper {
   height: 100%;
-  padding: 5% 0;
+  padding: 5.25rem 0;
   background-color: #F9F9F9; }
-
-.page-title {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 5%; }
-
-.profile-listing {
-  display: grid;
-  grid-template-columns: 0.25fr 1fr; }
 
 .profile-listing-wrapper {
   width: 45%;
   margin: 0 auto; }
 
 .profile-listing {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
   padding: 0 5%;
   margin-bottom: 5%;
   border-left: 1px solid #233656;
@@ -123,7 +121,7 @@ nav ul li:first-child {
 
 .userblogs-wrapper {
   height: 100%;
-  padding: 5% 0;
+  padding: 5.25rem 0;
   background-color: #F9F9F9; }
 
 .blog-listing-wrapper {
@@ -133,17 +131,214 @@ nav ul li:first-child {
 .blog-listing {
   display: grid;
   grid-template-columns: 0.15fr 1fr;
-  grid-template-rows: 0.15fr 1fr;
-  margin-bottom: 5%; }
+  grid-column-gap: 2.5rem;
+  grid-template-rows: 4.5em 1fr;
+  margin-bottom: 2.5rem; }
 
 .blog-title {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  grid-column: 1 / 3; }
 
 .blog-content {
   grid-row: 2;
   grid-column: 2; }
 
-.sign-up {
+.login-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: #F9F9F9; }
+
+#login-form {
+  text-align: center; }
+
+.login-title {
+  margin-bottom: 1rem; }
+
+.login-input {
+  height: 2.75rem;
+  width: 20rem;
+  padding: 0 10px;
+  margin-bottom: 1.5rem; }
+
+.login-input:last-of-type {
+  margin-bottom: 2.5rem; }
+
+.login-input:focus {
+  outline: none !important;
+  border: 1px solid #233656;
+  box-shadow: 0 0 10px #233656; }
+
+.sub-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: #233656;
+  color: #F9F9F9;
+  cursor: pointer; }
+
+.sub-button:hover {
+  background-color: #415B76; }
+
+.userprofile-wrapper {
+  height: 100%;
+  padding: 6.25rem 0;
+  background-color: #F9F9F9; }
+
+.userprofile-picture {
+  height: 300px;
+  width: 300px;
+  background-image: url("../images/placeholderprofilepic.png");
+  background-size: contain;
+  margin: 0 auto;
+  margin-bottom: 2.5rem; }
+
+.userprofile-info {
+  max-width: 400px;
   margin: 0 auto; }
+
+.userinfo {
+  margin-bottom: 0.5rem; }
+
+.userinfo:last-of-type {
+  margin-bottom: 2.5rem; }
+
+.userinfo-title {
+  font-weight: 600; }
+
+#update-button {
+  margin-bottom: 1.5rem; }
+
+#delete-acc-button {
+  margin-bottom: 5.25rem; }
+
+.profile-blog-listing {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  grid-column-gap: 2.5rem;
+  grid-template-rows: 4.5em 1fr;
+  margin-bottom: 2.5rem; }
+
+.profile-blog-title {
+  font-size: 1.5em;
+  grid-column: 1 / 3; }
+
+.profile-blog-content {
+  grid-row: 2;
+  grid-column: 2; }
+
+.profile-blog-buttons {
+  grid-row: 3;
+  grid-column: 2; }
+
+.edit-blog-form {
+  margin-bottom: 2.5rem; }
+
+.edituser-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: #F9F9F9; }
+
+#edituser-form {
+  text-align: center; }
+
+#editpass-form {
+  text-align: center; }
+
+.edituser-title {
+  margin-bottom: 1rem; }
+
+.edituser-input {
+  height: 2.75rem;
+  width: 20rem;
+  padding: 0 10px;
+  margin-bottom: 1.5rem; }
+
+.edituser-input:last-of-type {
+  margin-bottom: 2.5rem; }
+
+.login-input:focus {
+  outline: none !important;
+  border: 1px solid #233656;
+  box-shadow: 0 0 10px #233656; }
+
+#edituser-sub-button {
+  margin-bottom: 6rem; }
+
+.deleteuser-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: #F9F9F9; }
+
+#deleteuser-form {
+  text-align: center; }
+
+.sign-up-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: #F9F9F9; }
+
+#sign-up-form {
+  text-align: center; }
+
+.sign-up-title {
+  margin-bottom: 1rem; }
+
+.sign-up-input {
+  height: 2.75rem;
+  width: 20rem;
+  padding: 0 10px;
+  margin-bottom: 1.5rem; }
+
+.sign-up-input:last-of-type {
+  margin-bottom: 2.5rem; }
+
+.sign-up-input:focus {
+  outline: none !important;
+  border: 1px solid #233656;
+  box-shadow: 0 0 10px #233656; }
+
+.newblog-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: #F9F9F9; }
+
+#newblog-form {
+  text-align: center; }
+
+.blogcontent-input {
+  height: 25rem;
+  width: 50rem;
+  padding: 10px 10px;
+  margin-bottom: 2.5rem; }
+
+.blogcontent-input:focus {
+  outline: none !important;
+  border: 1px solid #233656;
+  box-shadow: 0 0 10px #233656; }
+
+.editblog-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: #F9F9F9; }
+
+#editblog-form {
+  text-align: center; }
+
+#blogcontent-input {
+  height: 25rem;
+  width: 50rem;
+  padding: 10px 10px;
+  margin-bottom: 2.5rem; }
+
+#blogcontent-input:focus {
+  outline: none !important;
+  border: 1px solid #233656;
+  box-shadow: 0 0 10px #233656; }
+
+#editblog-sub-button {
+  margin-bottom: 5.25rem; }
+
+#deleteblog-form {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

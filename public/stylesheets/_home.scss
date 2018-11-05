@@ -1,3 +1,4 @@
+// Wrapper for home section
 .home-wrapper {
   display: flex;
   align-items: center;
@@ -8,6 +9,7 @@
   background-position: center;
 }
 
+// Motto text across page
 #motto {
   font-size: 5.5em;
   color: $dark-blue;

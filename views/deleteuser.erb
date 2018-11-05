@@ -1,0 +1,12 @@
+<div class='deleteuser-wrapper'>
+  <h2 class='page-title'>Confirm Account Deletion</h2>
+
+  <form id='deleteuser-form' method='post' action='/destroyuser/<%= @currentuser.id %>'>
+    <h3 class='login-title'>Password Confirmation</h3>
+    <input class='login-input' type="text" name='destroycheck1'>
+    <h3 class='login-title'>Re-enter Password Confirmation</h3>
+    <input class='login-input' type="text" name='destroycheck2'>
+    <button class='sub-button' type="submit">SUBMIT</button>
+  </form>
+
+</div>

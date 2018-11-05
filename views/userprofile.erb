@@ -1,27 +1,32 @@
-<h2>Hello <%= @currentuser.username %> </h2>
+<div class='userprofile-wrapper'>
+  <div class='userprofile-picture'></div>
+  <div class='userprofile-info'>
+    <p class='userinfo'><span class='userinfo-title'>Username</span>: <a href="/users/view/<%= @currentuser.id %>"> <%= @currentuser.username %> </a></p>
+    <p class='userinfo'><span class='userinfo-title'>First Name</span>: <%= @currentuser.firstname %> </p>
+    <p class='userinfo'><span class='userinfo-title'>Last Name</span>: <%= @currentuser.lastname %> </p>
+    <p class='userinfo'><span class='userinfo-title'>Email</span>: <%= @currentuser.email %> </p>
+    <p class='userinfo'><span class='userinfo-title'>Birthday</span>: <%= @currentuser.birthday %> </p>
+  </div>
+  <form method='get' action='/users/<%= @currentuser.id %>/edit'>
+    <button class='sub-button' id='update-button' type="submit">UPDATE</button>
+  </form>
+  <form method='get' action='/users/<%= @currentuser.id %>/delete'>
+    <button class='sub-button' id='delete-acc-button' type="submit">DELETE ACCOUNT</button>
+  </form>
 
-<h3>First Name: <%= @currentuser.firstname %> </h3>
-<h3>Last Name: <%= @currentuser.lastname %> </h3>
-<h3>Email: <%= @currentuser.email %> </h3>
-<h3>Birthday: <%= @currentuser.birthday %> </h3>
+  <!-- <div class='sec-separator'></div> -->
 
-<br>
+  <h2 class='page-title'>Blogs</h2>
+  <div class='blog-listing-wrapper'>
+    <% @blogs.reverse[0...@blogs.length].each do |blog| %>
+      <div class='profile-blog-listing'>
+        <h3 class='profile-blog-title'><%= blog.title %></h3>
+        <p class='profile-blog-content'><%= blog.content %></p>
+      </div>
+      <form class='edit-blog-form' method='get' action='/blogs/<%= blog.id %>/edit'>
+        <button class='sub-button'>EDIT BLOG</button>
+      </form>
+    <% end %>
+  </div>
 
-<a href='/users/<%= @currentuser.id %>/edit'><input type="submit" value='update user info'></a>
-
-<br>
-
-<form method='post' action='/destroy/<%= @currentuser.id %>'>
-  <p>Destroy password confirmation</p>
-  <input type="text" name='destroycheck' value='type your password here to confirm destroy'>
-	<input type="submit" value="destroy user">
-</form>
-
-<br>
-<hr>
-<br>
-
-<% @blogs.each_with_index do |blog, index| %>
-<div><a href="/blogs/<%= blog.id %>"> <%= index + 1 %>. Title: <%= blog.title %></a></div>
-<div> <%= blog.content %> </div>
-<% end %>
+</div>

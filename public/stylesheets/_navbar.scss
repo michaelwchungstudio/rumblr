@@ -1,3 +1,4 @@
+// Header bar styling
 .navbar {
   text-align: center;
   box-sizing: content-box;
@@ -14,12 +15,14 @@
   color: $true-white;
 }
 
+// Logotext styling
 #saphfire {
   font-size: 2.75em;
   font-weight: 600;
   padding: 0 0;
 }
 
+// Logotext positioning
 nav ul li:first-child {
   display: flex;
   align-items: center;
@@ -27,9 +30,10 @@ nav ul li:first-child {
   margin-right: auto;
 }
 
+// Navbar links
 .navbar ul li a {
   display: block;
-  font-size: 1.125em;
+  font-size: 1.15em;
   font-weight: 500;
   color: $true-white;
   padding: 2.5em 2.5em;

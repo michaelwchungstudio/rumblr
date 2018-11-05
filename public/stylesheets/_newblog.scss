@@ -1,0 +1,24 @@
+// Wrapper for new blog form
+.newblog-wrapper {
+  height: 100%;
+  padding: 5.25rem 0;
+  background-color: $true-white;
+}
+
+#newblog-form {
+  text-align: center;
+}
+
+// Textarea for blog content
+.blogcontent-input {
+  height: 25rem;
+  width: 50rem;
+  padding: 10px 10px;
+  margin-bottom: 2.5rem;
+}
+
+.blogcontent-input:focus {
+  outline: none !important;
+  border: 1px solid $dark-blue;
+  box-shadow: 0 0 10px $dark-blue;
+}

@@ -1,9 +1,11 @@
-<h3>Create a new Blog:</h3>
+<div class='newblog-wrapper'>
+	<h2 class='page-title'>New Blog</h2>
 
-<form method='post' action="/create_blog">
-	<p>Title</p>
-	<input type="text" name="title">
-	<p>Content</p>
-	<textarea name="content"></textarea>
-	<input type="submit">
-</form>
+	<form id='newblog-form' method='post' action="/create_blog">
+		<h3 class='login-title'>Title</h3>
+		<input class='login-input' type="text" name="title">
+		<h3 class='login-title'>Content</h3>
+		<textarea class='blogcontent-input' name="content"></textarea>
+		<button class='sub-button' type="submit">SUBMIT</button>
+	</form>
+</div>

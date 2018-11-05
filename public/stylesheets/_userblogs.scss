@@ -1,23 +1,28 @@
+// Wrapper for one user's blogs
 .userblogs-wrapper {
   height: 100%;
-  padding: 5% 0;
+  padding: 5.25rem 0;
   background-color: $true-white;
 }
 
+// Wrapper for all blogs
 .blog-listing-wrapper {
   width: 70%;
   margin: 0 auto;
 }
 
+// Grid for each blog
 .blog-listing {
   display: grid;
   grid-template-columns: 0.15fr 1fr;
-  grid-template-rows: 0.15fr 1fr;
-  margin-bottom: 5%;
+  grid-column-gap: 2.5rem;
+  grid-template-rows: 4.5em 1fr;
+  margin-bottom: 2.5rem;
 }
 
 .blog-title {
   font-size: 1.5em;
+  grid-column: 1 / 3;
 }
 
 .blog-content {

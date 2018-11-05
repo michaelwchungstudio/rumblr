@@ -1,0 +1,71 @@
+// Wrapper for user profile
+.userprofile-wrapper {
+  height: 100%;
+  padding: 6.25rem 0;
+  background-color: $true-white;
+}
+
+// Profile image
+.userprofile-picture {
+  height: 300px;
+  width: 300px;
+  background-image: url('../images/placeholderprofilepic.png');
+  background-size: contain;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+// Profile information
+.userprofile-info {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.userinfo {
+  margin-bottom: 0.5rem;
+}
+
+.userinfo:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.userinfo-title {
+  font-weight: 600;
+}
+
+#update-button {
+  margin-bottom: 1.5rem;
+}
+
+#delete-acc-button {
+  margin-bottom: 5.25rem;
+}
+
+// Individual blog listings for profile page
+.profile-blog-listing {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  grid-column-gap: 2.5rem;
+  grid-template-rows: 4.5em 1fr;
+  margin-bottom: 2.5rem;
+}
+
+.profile-blog-title {
+  font-size: 1.5em;
+  grid-column: 1 / 3;
+}
+
+.profile-blog-content {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+// Button for editing blog post
+.profile-blog-buttons {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.edit-blog-form {
+  margin-bottom: 2.5rem;
+}

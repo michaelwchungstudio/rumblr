@@ -1,6 +1,24 @@
+// page-wide styling, fonts, etc.
 @import 'reset';
+// Header bar
 @import 'navbar';
+// Home page
 @import 'home';
+// All Users page
 @import 'allusers';
+// One User's blogs page
 @import 'userblogs';
+// Login page
+@import 'login';
+// User profile page
+@import 'userprofile';
+// Edit account page
+@import 'edituser';
+// Delete account page
+@import 'deleteuser';
+// Sign-up page
 @import 'signup';
+// New blog post page
+@import 'newblog';
+// Edit blog post page
+@import 'editblog';

@@ -1,33 +1,40 @@
-// Wrapper for sign-up form
-.sign-up-wrapper {
+// Wrapper for editing user information
+.edituser-wrapper {
   height: 100%;
   padding: 5.25rem 0;
   background-color: $true-white;
 }
 
-#sign-up-form {
+#edituser-form {
   text-align: center;
 }
 
-// Input title (same as .login-title)
-.sign-up-title {
+#editpass-form {
+  text-align: center;
+}
+
+.edituser-title {
   margin-bottom: 1rem;
 }
 
-// Input box (same as .login-input)
-.sign-up-input {
+// Each input for editing user
+.edituser-input {
   height: 2.75rem;
   width: 20rem;
   padding: 0 10px;
   margin-bottom: 1.5rem;
 }
 
-.sign-up-input:last-of-type {
+.edituser-input:last-of-type {
   margin-bottom: 2.5rem;
 }
 
-.sign-up-input:focus {
+.login-input:focus {
   outline: none !important;
   border: 1px solid $dark-blue;
   box-shadow: 0 0 10px $dark-blue;
+}
+
+#edituser-sub-button {
+  margin-bottom: 6rem;
 }

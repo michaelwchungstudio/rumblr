@@ -1,32 +1,27 @@
+// Wrapper for all users
 .allusers-wrapper {
   height: 100%;
-  padding: 5% 0;
+  padding: 5.25rem 0;
   background-color: $true-white;
 }
 
-.page-title {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 5%;
-}
-
-.profile-listing {
-  display: grid;
-  grid-template-columns: 0.25fr 1fr;
-}
-
+// Wrapper for all profile listings
 .profile-listing-wrapper {
   width: 45%;
   margin: 0 auto;
 }
 
+// Grid wrapper for individual profile listings
 .profile-listing {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
   padding: 0 5%;
   margin-bottom: 5%;
   border-left: 1px solid $dark-blue;
   border-right: 1px solid $dark-blue;
 }
 
+// Profile image for each profile
 .profile-image {
   height: 150px;
   width: 150px;
@@ -35,6 +30,7 @@
   background-repeat: no-repeat;
 }
 
+// Profile information
 .profile-listing-info {
   padding-left: 5%;
 }
@@ -47,6 +43,7 @@
   font-weight: 600;
 }
 
+// Styling link to view specfici user's blog posts
 .profile-listing-info p a:hover {
   font-weight: 600;
 }

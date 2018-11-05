@@ -2,7 +2,7 @@
   <h2 class='page-title'><%= @viewuser.username %>'s Blogs</h2>
 
   <div class='blog-listing-wrapper'>
-    <% @userblogs.each do |blog| %>
+    <% @userblogs.reverse[0...@userblogs.length].each do |blog| %>
       <div class='blog-listing'>
         <h3 class='blog-title'><%= blog.title %></h3>
         <p class='blog-content'><%= blog.content %></p>

@@ -1,24 +1,27 @@
-<h3>Edit profile information:</h3>
+<div class='edituser-wrapper'>
+  <h2 class='page-title'>Edit Account</h2>
 
-<form method='post' action="/users/<%= @currentuser.id %>/update">
-  <p>First Name</p>
-  <input type="text" name="firstname" value='<%=@currentuser.firstname %>'>
-  <p>Last Name</p>
-  <input type="text" name="lastname" value='<%=@currentuser.lastname %>'>
-  <p>Birthday</p>
-  <input type="text" name="birthday" value='<%=@currentuser.birthday %>'>
-  <p>E-mail</p>
-  <input type="text" name="email" value='<%=@currentuser.email %>'>
-	<input type="submit">
-</form>
+  <form id='edituser-form' method='post' action="/users/<%= @currentuser.id %>/update">
+    <h3 class='edituser-title'>First Name</h3>
+    <input class='edituser-input' type="text" name="firstname" value='<%=@currentuser.firstname %>'>
+    <h3 class='edituser-title'>Last Name</h3>
+    <input class='edituser-input' type="text" name="lastname" value='<%=@currentuser.lastname %>'>
+    <h3 class='edituser-title'>Birthday</h3>
+    <input class='edituser-input' type="text" name="birthday" value='<%=@currentuser.birthday %>'>
+    <h3 class='edituser-title'>E-mail</h3>
+    <input class='edituser-input' type="text" name="email" value='<%=@currentuser.email %>'>
+  	<button id='edituser-sub-button' class='sub-button' type="submit">SUBMIT</button>
+  </form>
 
-<h3>Edit password:</h3>
-<form method='post' action="/users/<%= @currentuser.id %>/updatepassword">
-  <p>Current Password</p>
-  <input type="text" name="currentpassword">
-  <p>New Password</p>
-  <input type="text" name="newpassword1">
-  <p>Re-enter New Password</p>
-  <input type="text" name="newpassword2">
-	<input type="submit">
-</form>
+  <h2 class='page-title'>Edit Password</h2>
+  <form id='editpass-form' method='post' action="/users/<%= @currentuser.id %>/updatepassword">
+    <h3 class='edituser-title'>Current Password</h3>
+    <input class='edituser-input' type="text" name="currentpassword">
+    <h3 class='edituser-title'>New Password</h3>
+    <input class='edituser-input' type="text" name="newpassword1">
+    <h3 class='edituser-title'>Re-enter New Password</h3>
+    <input class='edituser-input' type="text" name="newpassword2">
+  	<button class='sub-button' type="submit">SUBMIT</button>
+  </form>
+
+</div>

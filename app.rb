@@ -50,7 +50,7 @@ post "/signup" do
   if User.create(username: username, password: password, birthday: birthday, email: email, firstname: firstname, lastname: lastname)
     redirect "/"
   else
-    erb :testhello
+    redirect "/signup"
   end
 end
 
@@ -67,19 +67,21 @@ post "/login" do
 
 	user = User.where(username: username).first
 
-	if user.password == password
-		session[:user_id] = user.id
-		redirect "/users/#{user.id}"
+	if user != nil
+		if user.password == password
+			session[:user_id] = user.id
+			redirect "/users/#{user.id}"
+		else
+			redirect "/login"
+		end
 	else
-		redirect "/"
+		redirect "/login"
 	end
 end
 
 # Successful log-in redirects to user profile page
 # ("/users/:id")
 get "/users/:id" do
-	p session[:user_id]
-
 	@currentuser = User.find(params[:id])
 	@blogs = Blog.where(user_id: session[:user_id])
 
@@ -123,13 +125,21 @@ post "/users/:id/updatepassword" do
 	end
 end
 
+# Delete a user password confirmation page
+# (/users/:id/delete)
+get "/users/:id/delete" do
+	@currentuser = User.find(params[:id])
+	erb :deleteuser
+end
+
 # POST: Delete a user
-post "/destroy/:id" do
+post "/destroyuser/:id" do
 	currentuser = User.find(params[:id])
 	userblogs = Blog.where(user_id: params[:id])
-	passwordcheck = params[:destroycheck]
+	passwordcheck1 = params[:destroycheck1]
+	passwordcheck2 = params[:destroycheck2]
 
-	if passwordcheck == currentuser.password
+	if passwordcheck1 == currentuser.password && passwordcheck2 == currentuser.password
 		if currentuser.destroy
 			userblogs.each do |blog|
 				blog.destroy
@@ -137,7 +147,7 @@ post "/destroy/:id" do
 			session[:user_id] = nil
 			redirect "/"
 		else
-			erb :testhello
+			redirect "/users/#{currentuser.id}"
 		end
 	else
 		redirect "/users/#{currentuser.id}"
@@ -153,7 +163,7 @@ end
 # POST: Create a blog post
 post "/create_blog" do
 	if !session[:user_id]
-		erb :testhello
+		redirect "/newblog"
 	else
 	  title = params[:title]
 	  content = params[:content]
@@ -162,12 +172,13 @@ post "/create_blog" do
 
 	  Blog.create(title: title, content: content, likes: 0, user_id: user.id)
 
-	  redirect "/"
+	  redirect "/users/#{user.id}"
 	end
 end
 
 # Show a specific blog post
 # ("/blogs/:id")
+# NOT CURRENTLY IN USE (LINKED ON PAGE)
 get "/blogs/:id" do
   @blog = Blog.find(params[:id])
 	erb :showblog
@@ -185,21 +196,30 @@ post "/blogs/:id/update" do
 	@blog = Blog.find(params[:id])
 	title = params[:title]
 	content = params[:content]
+	user = User.find(session[:user_id])
 
 	if @blog.update(title: title, content: content)
-		redirect "/"
+		redirect "/users/#{user.id}"
 	else
 		erb "/blogs/<%= @blog.id %>/edit"
 	end
 end
 
 # POST: Destroy a blog post
-post "/destroy/:id" do
+post "/destroyblog/:id" do
+	currentuser = User.find(session[:user_id])
+	passwordcheck1 = params[:destroycheck1]
+	passwordcheck2 = params[:destroycheck2]
 	@blog = Blog.find(params[:id])
-	if @blog.destroy
-		redirect "/"
+
+	if passwordcheck1 == currentuser.password && passwordcheck2 == currentuser.password
+		if @blog.destroy
+			redirect "/users/#{currentuser.id}"
+		else
+			redirect "/blogs/#{@blog.id}/edit"
+		end
 	else
-		erb :testhello
+		redirect "/blogs/#{@blog.id}/edit"
 	end
 end
 

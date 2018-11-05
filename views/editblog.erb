@@ -1,9 +1,22 @@
-<h3>Update a Blog</h3>
+<div class='editblog-wrapper'>
+  <h2 class='page-title'>Edit Blog</h2>
 
-<form method='post' action="/blogs/<%= @blog.id %>/update">
-  <p>Title</p>
-	<input type="text" name="title" value='<%=@blog.title %>'>
-	<p>Content</p>
-	<textarea name="content"><%= @blog.content %></textarea>
-	<input type="submit">
-</form>
+  <form id='editblog-form' method='post' action="/blogs/<%= @blog.id %>/update">
+    <h3 class='login-title'>Title</h3>
+  	<input class='login-input' type="text" name="title" value='<%=@blog.title %>'>
+  	<h3 class='login-title'>Content</h3>
+  	<textarea class='blogcontent-input' name="content"><%= @blog.content %></textarea>
+  	<button class='sub-button' id='editblog-sub-button' type="submit">SUBMIT</button>
+  </form>
+
+  <h2 class='page-title'>Delete Blog</h2>
+
+  <form id='deleteblog-form' method='post' action='/destroyblog/<%= @blog.id %>'>
+    <h3 class='login-title'>Password</h3>
+    <input class='login-input' type="text" name="destroycheck1">
+    <h3 class='login-title'>Re-enter Password</h3>
+    <input class='login-input' type="text" name="destroycheck2">
+    <button class='sub-button' type="submit">SUBMIT</button>
+  </form>
+
+</div>
