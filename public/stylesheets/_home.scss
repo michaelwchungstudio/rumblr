@@ -1,0 +1,16 @@
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url('../images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#motto {
+  font-size: 5.5em;
+  color: $dark-blue;
+  font-weight: 500;
+  margin-bottom: 10vh;
+}

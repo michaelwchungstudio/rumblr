@@ -1,6 +1,17 @@
-<h3>List of users</h3>
+<div class='allusers-wrapper'>
+  <h2 class='page-title'>Saphfire Profiles</h2>
 
-<% @users.each do |user| %>
-  <a href="/users/view/<%= user.id %>"> <%= user.username %> </a>
-  <p> <%= user.firstname %> <%= user.lastname %> </p>
-<% end %>
+  <div class='profile-listing-wrapper'>
+    <% @users.each do |user| %>
+      <div class='profile-listing'>
+        <div class='profile-image'></div>
+        <div class='profile-listing-info'>
+          <p><span class='info-title'>Username</span>: <a href="/users/view/<%= user.id %>"> <%= user.username %> </a></p>
+          <p><span class='info-title'>Name</span>: <%= user.firstname %> <%= user.lastname %></p>
+          <p><span class='info-title'>Misc. Info</span>: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

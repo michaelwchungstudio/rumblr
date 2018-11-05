@@ -1,8 +1,12 @@
-<h2>List of <%= @viewuser.username %>'s blogs</h2>
-<br>
+<div class='userblogs-wrapper'>
+  <h2 class='page-title'><%= @viewuser.username %>'s Blogs</h2>
 
-<% @userblogs.each_with_index do |blog, index| %>
-  <h3> <%= blog.title %> </h3>
-  <p> <%= blog.content %> </p>
-  <br>
-<% end %>
+  <div class='blog-listing-wrapper'>
+    <% @userblogs.each do |blog| %>
+      <div class='blog-listing'>
+        <h3 class='blog-title'><%= blog.title %></h3>
+        <p class='blog-content'><%= blog.content %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

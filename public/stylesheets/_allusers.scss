@@ -1,0 +1,52 @@
+.allusers-wrapper {
+  height: 100%;
+  padding: 5% 0;
+  background-color: $true-white;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 5%;
+}
+
+.profile-listing {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+}
+
+.profile-listing-wrapper {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.profile-listing {
+  padding: 0 5%;
+  margin-bottom: 5%;
+  border-left: 1px solid $dark-blue;
+  border-right: 1px solid $dark-blue;
+}
+
+.profile-image {
+  height: 150px;
+  width: 150px;
+  background-image: url('../images/placeholderprofilepic.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.profile-listing-info {
+  padding-left: 5%;
+}
+
+.profile-listing-info p {
+  padding: 0.25rem 0;
+}
+
+.info-title {
+  font-weight: 600;
+}
+
+.profile-listing-info p a:hover {
+  font-weight: 600;
+}

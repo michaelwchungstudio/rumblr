@@ -7,26 +7,27 @@
     <title></title>
   </head>
   <body>
-    <nav class='navbar'>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/users">Users</a></li>
-        <% if !user_logged_in %>
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/signup">Sign Up</a></li>
-        <% end %>
-        <% if user_logged_in %>
-          <li><a href="/newblog">New Blog</a></li>
-          <li><a href="/users/<%= @active_user.id %>">Profile</a></li>
-          <li><a href="/logout">Log Out</a></li>
-        <% end %>
-      </ul>
-    </nav>
+    <div class='page-wrapper'
+      <!-- Header Bar -->
+      <nav class='navbar'>
+        <ul>
+          <li><a href="/" id='saphfire'>SAPHFIRE</a></li>
+          <li><a href="/users">USERS</a></li>
+          <% if !user_logged_in %>
+            <li><a href="/login">LOG IN</a></li>
+            <li><a href="/signup">SIGN UP</a></li>
+          <% end %>
+          <% if user_logged_in %>
+            <li><a href="/newblog">NEW BLOG</a></li>
+            <li><a href="/users/<%= @active_user.id %>">PROFILE</a></li>
+            <li><a href="/logout">LOG OUT</a></li>
+          <% end %>
+        </ul>
+      </nav>
 
-    <div class='main-container'>
-  		<%= yield %>
-  	</div>
-
-
+      <div class='main-container'>
+    		<%= yield %>
+    	</div>
+    </div>
   </body>
 </html>

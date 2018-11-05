@@ -1,7 +1,51 @@
+// Colors
+$dark-blue: #233656;
+$med-blue: #415B76;
+$light-blue: #7B9BA6;
+$cool-gray: #CDD6D5;
+$off-white: #EEF4F2;
+
+$true-white: #F9F9F9;
+
+// Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica;
   font-size: 16px;
+  font-family: "DinOT";
+  color: $dark-blue;
+}
+
+// Fonts
+// Din OT
+@font-face {
+  font-family: "DinOT";
+  src: url("../fonts/DINOT.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DinOT";
+  src: url("../fonts/DINOT-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "DinOT";
+  src: url("../fonts/DINOT-Bold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "DinOT";
+  src: url("../fonts/DINOT-Light.otf");
+  font-weight: 300;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr;
+  height: 100vh;
+  width: 100vw;
 }

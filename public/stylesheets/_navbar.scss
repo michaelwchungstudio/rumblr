@@ -1,8 +1,41 @@
 .navbar {
   text-align: center;
-  margin: 3.5vh 0;
+  box-sizing: content-box;
+  background-color: $dark-blue;
+}
+
+.navbar ul {
+  display: flex;
 }
 
 .navbar ul li {
   display: inline-block;
+  list-style-type: none;
+  color: $true-white;
+}
+
+#saphfire {
+  font-size: 2.75em;
+  font-weight: 600;
+  padding: 0 0;
+}
+
+nav ul li:first-child {
+  display: flex;
+  align-items: center;
+  margin-left: 2.5em;
+  margin-right: auto;
+}
+
+.navbar ul li a {
+  display: block;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: $true-white;
+  padding: 2.5em 2.5em;
+  text-decoration: none;
+}
+
+.navbar ul li:not(:first-child):hover {
+  background-color: $med-blue;
 }
